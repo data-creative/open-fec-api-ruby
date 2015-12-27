@@ -1,0 +1,79 @@
+{
+  "pagination": {
+    "pages": 1,
+    "page": 1,
+    "per_page": 20,
+    "count": 2
+  },
+  "api_version": "1.0",
+  "results": [
+    {
+      "incumbent_challenge_full": "Open seat",
+      "election_districts": [
+        "00",
+        "00"
+      ],
+      "office_full": "President",
+      "party_full": "Democratic Party",
+      "name": "CLINTON, HILLARY RODHAM",
+      "office": "P",
+      "election_years": [
+        2008,
+        2016
+      ],
+      "party": "DEM",
+      "active_through": 2016,
+      "cycles": [
+        2008,
+        2010,
+        2012,
+        2014,
+        2016
+      ],
+      "district_number": 0,
+      "district": "00",
+      "state": "US",
+      "incumbent_challenge": "O",
+      "candidate_status": "C",
+      "load_date": "2015-11-02",
+      "candidate_id": "P00003392"
+    },
+    {
+      "incumbent_challenge_full": "Challenger",
+      "election_districts": [
+        "00",
+        "00",
+        "00"
+      ],
+      "office_full": "Senate",
+      "party_full": "Democratic Party",
+      "name": "CLINTON, HILLARY RODHAM",
+      "office": "S",
+      "election_years": [
+        2000,
+        2006,
+        2012
+      ],
+      "party": "DEM",
+      "active_through": 2012,
+      "cycles": [
+        2000,
+        2002,
+        2004,
+        2006,
+        2008,
+        2010,
+        2012,
+        2014,
+        2016
+      ],
+      "district_number": 0,
+      "district": "00",
+      "state": "NY",
+      "incumbent_challenge": "C",
+      "candidate_status": "P",
+      "load_date": "2013-04-26",
+      "candidate_id": "S0NY00188"
+    }
+  ]
+}
