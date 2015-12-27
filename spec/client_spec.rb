@@ -56,6 +56,50 @@ module OpenFecApi
     end
 
     #
+    # Candidate Endpoint
+    #
+
+    describe '#candidate' do
+      context "when configured" do
+        let(:candidate_id){"P00003392"}
+        before do
+          @client = OpenFecApi::Client.new(ENV["OPEN_FEC_API_KEY"])
+        end
+
+        def request_and_print(candidate_id, options)
+          response = @client.candidate(candidate_id, options)
+          pp response.summary
+          return response
+        end #todo: maybe return mock response instead
+
+        it "returns data about the specified candidate" do
+          options = {:page => 1, :per_page => 100}
+          response = request_and_print(candidate_id, options)
+          candidate_name = response.results.map{|c| c["name"]}.uniq
+          expect(candidate_name).to eql(["CLINTON, HILLARY RODHAM"])
+        end
+      end
+    end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    #
     # Committees Endpoint
     #
 
@@ -81,5 +125,34 @@ module OpenFecApi
         end
       end
     end
+
+
+
+    #
+    # Committee Endpoint
+    #
+
+    describe '#committee' do
+      context "when configured" do
+        let(:committee_id){"C00571372"}
+        before do
+          @client = OpenFecApi::Client.new(ENV["OPEN_FEC_API_KEY"])
+        end
+
+        def request_and_print(committee_id, options)
+          response = @client.committee(committee_id, options)
+          pp response.summary
+          return response
+        end #todo: maybe return mock response instead
+
+        it "returns data about the specified committee" do
+          options = {:page => 1, :per_page => 100}
+          response = request_and_print(committee_id, options)
+          committee_name = response.results.map{|c| c["name"]}.uniq
+          expect(committee_name).to eql(["RIGHT TO RISE USA"])
+        end
+      end
+    end
+
   end
 end

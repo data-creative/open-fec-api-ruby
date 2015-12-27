@@ -1,0 +1,48 @@
+{
+  "pagination": {
+    "pages": 1,
+    "page": 1,
+    "per_page": 20,
+    "count": 1
+  },
+  "api_version": "1.0",
+  "results": [
+    {
+      "incumbent_challenge_full": "Open seat",
+      "election_districts": [
+        "00",
+        "00"
+      ],
+      "address_zip": "101855256",
+      "name": "CLINTON, HILLARY RODHAM",
+      "address_state": "NY",
+      "candidate_id": "P00003392",
+      "district_number": 0,
+      "district": "00",
+      "office_full": "President",
+      "office": "P",
+      "load_date": "2015-11-02",
+      "address_street_2": null,
+      "active_through": 2016,
+      "address_city": "NEW YORK",
+      "party_full": "Democratic Party",
+      "candidate_inactive": false,
+      "address_street_1": "P.O. BOX 5256",
+      "election_years": [
+        2008,
+        2016
+      ],
+      "party": "DEM",
+      "cycles": [
+        2008,
+        2010,
+        2012,
+        2014,
+        2016
+      ],
+      "state": "US",
+      "incumbent_challenge": "O",
+      "candidate_status": "C"
+    }
+  ]
+}

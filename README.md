@@ -18,8 +18,15 @@ Obtain an [API key](https://api.data.gov/signup/).
 
 ```` rb
 client = OpenFecApi::Client.new("api_key_123")
+
 candidates_response = client.candidates
+
+candidate_response = client.candidate("P00003392")
+
 committees_response = client.committees
+
+committees_response = client.committee("C00571372")
+
 ````
 ### Configuration Options
 
@@ -45,7 +52,7 @@ response = client.candidates(options)
 
 ## Contributing
 
-Help wrap all the [endpoints](ENDPOINTS.md)!
+Help establish and maintain full API endpoint coverage.
 
 Browse existing issues or create a new issue to communicate bugs, desired features, etc.
 

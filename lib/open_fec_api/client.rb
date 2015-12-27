@@ -43,7 +43,7 @@ module OpenFecApi
     #   option options Integer :per_page The number of results returned per page. Defaults to 20.
     #
     def get_response(endpoint, options = {})
-      endpoint_name = endpoint.gsub("/","")
+      endpoint_name = (endpoint.split("/") - [""]).first
       request_options = options.select{|k,v| request_params.include?(k.to_s)}
 
       # Parse/compile query params.
@@ -63,24 +63,103 @@ module OpenFecApi
       return OpenFecApi.const_get(response_class_name).new(response) # response_class_name.constantize.new(response)
     end
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     # Candidates Endpoint
     #
     # https://api.open.fec.gov/developers#!/candidate/get_candidates
     #
     # @example
-    #   OpenFecApi::Client.new(:api_key => API_KEY).candidates(:page => 1, :per_page => 100)
+    #   OpenFecApi::Client.new(:api_key => API_KEY).candidates({:page => 1, :per_page => 100})
     def candidates(options = {})
       get_response("/candidates", options)
     end
+
+    # Candidate Endpoint
+    #
+    # https://api.open.fec.gov/developers/#!/candidate/get_candidate_candidate_id
+    #
+    # @param [String] candidate_id
+    #
+    # @example
+    #   OpenFecApi::Client.new(:api_key => API_KEY).candidate("P00003392", {:page => 1, :per_page => 100})
+    def candidate(candidate_id, options = {})
+      get_response("/candidate/#{candidate_id}", options)
+    end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     # Committees Endpoint
     #
     # https://api.open.fec.gov/developers#!/committee/get_committees
     #
     # @example
-    #   OpenFecApi::Client.new(:api_key => API_KEY).committees(:page => 1, :per_page => 100)
+    #   OpenFecApi::Client.new(:api_key => API_KEY).committees({:page => 1, :per_page => 100})
     def committees(options = {})
       get_response("/committees", options)
     end
+
+
+
+
+
+
+
+
+
+
+
+
+    # Committee Endpoint
+    #
+    # https://api.open.fec.gov/developers#!/committee/get_committees
+    #
+    # @param [String] committee_id
+    #
+    # @example
+    #   OpenFecApi::Client.new(:api_key => API_KEY).committee("C00571372", {:page => 1, :per_page => 100})
+    def committee(committee_id, options = {})
+      get_response("/committee/#{committee_id}", options)
+    end
+
+
+
+
+
+
+
+
+
+
   end
 end

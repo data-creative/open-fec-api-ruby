@@ -1,0 +1,35 @@
+{
+  "pagination": {
+    "pages": 1,
+    "page": 1,
+    "per_page": 20,
+    "count": 1
+  },
+  "api_version": "1.0",
+  "results": [
+    {
+      "street_2": null,
+      "cycle": 2014,
+      "committee_type": "O",
+      "committee_type_full": "Super PAC (Independent Expenditure-Only)",
+      "state_full": "California    ",
+      "expire_date": null,
+      "designation": "U",
+      "name": "10 ^ 9+",
+      "city": "SUNNYVALE",
+      "party_full": null,
+      "treasurer_name": "RANDI M WILLIS",
+      "committee_id": "C00563023",
+      "organization_type_full": null,
+      "organization_type": null,
+      "cycles": [
+        2014
+      ],
+      "party": null,
+      "state": "CA",
+      "zip": "94085",
+      "street_1": "165 W DUANE AVE",
+      "designation_full": "Unauthorized"
+    }
+  ]
+}
