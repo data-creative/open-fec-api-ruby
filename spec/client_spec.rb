@@ -129,7 +129,7 @@ module OpenFecApi
 
 
     #
-    # Candidate Endpoint
+    # Committee Endpoint
     #
 
     describe '#committee' do
